@@ -53,7 +53,7 @@ func LikeAction(userId int64, videoIdStr string, like bool) error {
 		return errors.New("video not exist")
 	}
 
-	//那如果是取消点赞呢，下面的逻辑还需要成立吗？
+	// need bug fix
 	videoId, err := strconv.ParseInt(videoIdStr, 10, 64)
 	if err != nil {
 		return err
